@@ -1,0 +1,245 @@
+/* =====================================================
+   FABBRIDGE - GLOBAL RESPONSIVE CSS
+===================================================== */
+
+/* =====================================================
+   GLOBAL BASE ADJUSTMENTS
+===================================================== */
+* {
+    box-sizing: border-box !important;
+}
+
+.hamburger {
+    display: none;
+}
+
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+/* =====================================================
+   TABLET RESPONSIVE (Max-width: 1024px)
+===================================================== */
+@media screen and (max-width: 1024px) {
+    /* Dashboard & Admin */
+    .sidebar {
+        width: 200px !important;
+    }
+    .content, .admin-content, .customer-content, .main-content {
+        margin-left: 200px !important;
+        width: calc(100% - 200px) !important;
+        padding: 30px !important;
+    }
+    .cards, .admin-cards, .stats-container, .feature-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .hero h1 {
+        font-size: 40px !important;
+    }
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE (Max-width: 768px)
+===================================================== */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .navbar {
+        flex-direction: column !important;
+        padding: 15px !important;
+        gap: 15px !important;
+    }
+    .nav-links {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+
+    /* Dashboard & Admin Sidebar Collapse */
+    .topbar {
+        padding: 0 15px !important;
+    }
+    
+    .hamburger {
+        display: inline-block !important;
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 15px;
+    }
+
+    .topbar-right input, .search-bar, #dashboardSearch {
+        width: 120px !important;
+        padding: 6px !important;
+        font-size: 14px !important;
+    }
+    
+    .sidebar {
+        width: 250px !important;
+        position: fixed !important;
+        left: -250px !important; /* Hidden by default */
+        top: 70px !important;
+        height: calc(100vh - 70px) !important;
+        z-index: 999 !important;
+        transition: left 0.3s ease !important;
+    }
+    
+    .sidebar.open {
+        left: 0 !important;
+    }
+    
+    .sidebar a {
+        justify-content: flex-start !important;
+        padding: 15px 20px !important;
+        font-size: 16px !important;
+    }
+    
+    .sidebar span, .notification-badge {
+        display: inline-block !important;
+    }
+
+    /* Dashboard & Admin Content */
+    .content, .admin-content, .customer-content, .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 15px !important;
+    }
+
+    /* Grids to Single Column */
+    .cards, .admin-cards, .stats-container, .feature-container, .footer-container {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .steps {
+        flex-direction: column !important;
+    }
+    .arrow {
+        transform: rotate(90deg) !important;
+        margin: 10px 0 !important;
+    }
+
+    /* Forms */
+    .login-box, .register-box, .form-container, .post-box, .profile-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px !important;
+        margin: 10px auto !important;
+    }
+    
+    .input-group, .form-group {
+        width: 100% !important;
+    }
+    .input-group input, .input-group select, .input-group textarea, 
+    .form-group input, .form-group select, .form-group textarea {
+        width: 100% !important;
+    }
+    
+    /* Tables Horizontal Scroll */
+    .table-wrapper, .table-container, .table-responsive, .recent, .admin-table, .quotation-table, .requirements-table {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    table {
+        min-width: 600px !important; /* Ensure table doesn't get crushed */
+    }
+
+    /* Typography */
+    .hero h1 {
+        font-size: 32px !important;
+    }
+    .hero p {
+        font-size: 16px !important;
+    }
+    h1 {
+        font-size: 24px !important;
+    }
+    h2 {
+        font-size: 20px !important;
+    }
+    
+    /* Marketplace/Search Specific */
+    .company-search-box input, .marketplace-search input {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .company-card, .requirement-card {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+}
+
+/* =====================================================
+   SMALL MOBILE RESPONSIVE (Max-width: 480px)
+===================================================== */
+@media screen and (max-width: 480px) {
+    /* Padding & Margins adjustments */
+    .content, .admin-content, .customer-content, .main-content {
+        padding: 10px !important;
+    }
+    .card, .admin-card, .feature-card, .step, .stat-box, .company-card, .requirement-card {
+        padding: 15px !important;
+    }
+
+    /* Buttons */
+    .btn, .btn-primary, .btn-secondary, .login-btn, .submit-btn, button:not(.close-modal):not(.nav-links button) {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 14px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .nav-links .login-btn {
+        width: auto !important;
+    }
+
+    /* Topbar Logo */
+    .logo {
+        font-size: 18px !important;
+    }
+
+    /* Modals */
+    .modal-content, .modal-box {
+        width: 95% !important;
+        max-width: 95% !important;
+        margin: 20px auto !important;
+        padding: 15px !important;
+    }
+
+    /* Specific adjust for Login / Register Container */
+    .login-container, .register-container {
+        padding: 15px !important;
+    }
+    
+    /* Ensure text wraps nicely */
+    p, span, div, h1, h2, h3, h4, h5, h6 {
+        word-wrap: break-word !important;
+        white-space: normal !important;
+    }
+
+    .status, .badge, .role, .date-count-badge, .notification-badge, .req-category-badge {
+        white-space: nowrap !important;
+    }
+    
+    /* Company / Profile specifics */
+    .company-header, .profile-header {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    .company-logo, .profile-avatar {
+        margin: 0 auto 15px auto !important;
+    }
+    
+    /* Side-by-side elements turning into column */
+    .topbar-right {
+        gap: 10px !important;
+    }
+}

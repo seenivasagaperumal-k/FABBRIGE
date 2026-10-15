@@ -1,0 +1,150 @@
+/* =====================================================
+   FABBRIDGE - PROFILE (PROFILE.CSS)
+   Enterprise B2B User Profile Editor
+   ===================================================== */
+
+.container {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 36px 40px;
+    border-radius: var(--fb-radius-lg);
+    border: 1px solid var(--fb-slate-200);
+    box-shadow: var(--fb-shadow-sm);
+    box-sizing: border-box;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--fb-slate-200);
+}
+
+.profile-header img {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--fb-primary);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
+}
+
+.profile-header h1 {
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--fb-navy);
+    letter-spacing: -0.5px;
+}
+
+.profile-header p,
+#accountType {
+    display: inline-block;
+    background: var(--fb-primary-light);
+    color: var(--fb-primary);
+    border: 1px solid #bfdbfe;
+    padding: 4px 12px;
+    border-radius: var(--fb-radius-full);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    margin-bottom: 7px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--fb-navy);
+}
+
+.input-group input,
+.input-group textarea {
+    padding: 12px 14px;
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-md);
+    font-size: 14px;
+    color: var(--fb-navy);
+    outline: none;
+    font-family: var(--fb-font);
+    background: #ffffff;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--fb-primary);
+    box-shadow: 0 0 0 3px var(--fb-primary-glow);
+}
+
+.input-group input[readonly] {
+    background: var(--fb-slate-50);
+    color: var(--fb-slate-600);
+    cursor: default;
+}
+
+.input-group input[readonly]:focus {
+    box-shadow: none;
+    border-color: var(--fb-slate-200);
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"],
+#updateProfile {
+    width: 100%;
+    margin-top: 10px;
+    padding: 13px 20px;
+    background: var(--fb-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--fb-radius-md);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
+    transition: all 0.2s ease;
+    font-family: var(--fb-font);
+}
+
+button[type="submit"]:hover,
+#updateProfile:hover {
+    background: var(--fb-primary-hover);
+    box-shadow: 0 5px 14px rgba(37, 99, 235, 0.35);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        padding: 24px 20px;
+    }
+}

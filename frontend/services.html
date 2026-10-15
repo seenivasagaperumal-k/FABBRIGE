@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services | FabBridge</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TOPBAR (Standard Platform Header)
+    ===================================================== -->
+    <header class="topbar">
+        <div class="logo">
+            <span class="hamburger" id="hamburgerMenu">☰</span>
+            FabBridge
+        </div>
+        <div class="topbar-right">
+            <input type="text" id="dashboardSearch" placeholder="Search...">
+            <span class="profile">
+                👤 <span id="userName">User</span>
+            </span>
+        </div>
+    </header>
+
+    <!-- =====================================================
+         SIDEBAR (Platform Standard Navigation)
+    ===================================================== -->
+    <aside class="sidebar" id="mainSidebar">
+        <ul>
+            <li id="navDashboard"><a href="customer-dashboard.html" id="dashboardNavLink">🏠 Dashboard</a></li>
+            <li><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+            <li><a href="marketplace.html">🌐 Marketplace</a></li>
+            <li><a href="projects.html">📋 My Requirements</a></li>
+            <li><a href="received-quotations.html">📨 Received Quotations</a></li>
+            <li><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+            <li class="active"><a href="services.html">🛠️ Services</a></li>
+            <li><a href="profile.html">👤 Profile</a></li>
+            <li><a href="settings.html">⚙️ Settings</a></li>
+            <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- =====================================================
+         DASHBOARD WRAPPER & MAIN CONTENT
+    ===================================================== -->
+    <div class="dashboard">
+        <main class="content">
+
+            <!-- PAGE HEADER -->
+            <div class="page-header" style="margin-bottom: 24px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+                    <div>
+                        <h1 style="display: flex; align-items: center; gap: 10px; font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">
+                            <span>🛠️</span> Manufacturing Services Showcase
+                        </h1>
+                        <p style="color: #64748b; font-size: 15px;">
+                            Discover specialized manufacturing capabilities or showcase your facility's verified industrial services.
+                        </p>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                        <button id="dashboardBtn" class="dashboard-btn" style="display: none;">
+                            🏠 Dashboard
+                        </button>
+                        <button id="addServiceBtn" class="add-btn" style="display: none;">
+                            + Add Service
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Filter for Company Users -->
+            <div class="services-tab-bar" id="servicesTabBar" style="display: none;">
+                <button class="tab-btn active" id="tabAllServices">All Available Services</button>
+                <button class="tab-btn" id="tabMyServices">My Listed Services</button>
+            </div>
+
+            <!-- SEARCH BAR -->
+            <section class="search-section">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search services by keyword, category, machine type, or provider..."
+                    autocomplete="off">
+            </section>
+
+            <!-- SERVICES LIST CONTAINER -->
+            <section class="services-container" style="background: transparent; padding: 0; box-shadow: none; border: none;">
+                <div id="serviceList" class="service-list">
+                    <div class="loading">
+                        <div style="font-size: 28px; margin-bottom: 8px;">⏳</div>
+                        Loading services...
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- =====================================================
+         ADD SERVICE MODAL
+    ===================================================== -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div>
+                    <h2>Add New Manufacturing Service</h2>
+                    <p>Showcase a specialized capability on your company profile and the marketplace.</p>
+                </div>
+                <button id="closeModalBtn" class="close-btn" type="button">&times;</button>
+            </div>
+
+            <!-- Form -->
+            <form id="serviceForm">
+
+                <!-- Service Name -->
+                <div class="form-group">
+                    <label for="serviceName">Service Name</label>
+                    <input
+                        type="text"
+                        id="serviceName"
+                        placeholder="e.g. 5-Axis Precision CNC Milling"
+                        required>
+                </div>
+
+                <!-- Category -->
+                <div class="form-group">
+                    <label for="serviceCategory">Manufacturing Category</label>
+                    <select id="serviceCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="CNC Machining">CNC Machining</option>
+                        <option value="Sheet Metal & Fabrication">Sheet Metal & Fabrication</option>
+                        <option value="Laser Cutting">Laser Cutting</option>
+                        <option value="Injection Moulding">Injection Moulding</option>
+                        <option value="3D Printing">3D Printing</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Manufacturing">Manufacturing</option>
+                        <option value="Machining">Machining</option>
+                        <option value="Textile">Textile</option>
+                        <option value="Fabrication">Fabrication</option>
+                        <option value="Packaging">Packaging</option>
+                        <option value="Repair & Maintenance">Repair & Maintenance</option>
+                        <option value="Design">Design & CAD</option>
+                        <option value="Logistics">Logistics</option>
+                        <option value="Other">Other Manufacturing</option>
+                    </select>
+                </div>
+
+                <!-- Price -->
+                <div class="form-group">
+                    <label for="servicePrice">Starting Price (₹)</label>
+                    <input
+                        type="number"
+                        id="servicePrice"
+                        placeholder="e.g. 1500"
+                        min="0"
+                        required>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label for="serviceDescription">Service Description & Capabilities</label>
+                    <textarea
+                        id="serviceDescription"
+                        rows="4"
+                        placeholder="Describe materials handled, tolerances, equipment specifications, and turnaround time..."
+                        required></textarea>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-buttons">
+                    <button type="button" id="cancelBtn" class="cancel-btn">
+                        Cancel
+                    </button>
+                    <button type="submit" class="save-btn">
+                        Publish Service
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- =====================================================
+         JAVASCRIPT MODULES
+    ===================================================== -->
+    <script type="module" src="js/services.js"></script>
+    <script type="module" src="js/navigation.js"></script>
+
+</body>
+</html>

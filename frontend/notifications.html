@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Notifications | FabBridge</title>
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/notifications.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<!-- =========================
+     TOPBAR & SIDEBAR WILL BE INJECTED BY navigation.js
+========================= -->
+
+        <header class="topbar">
+            <div class="logo">
+                <span class="hamburger" id="hamburgerMenu">☰</span>
+                FabBridge
+            </div>
+            <div class="topbar-right">
+                <input type="text" id="dashboardSearch" placeholder="Search...">
+                <span class="profile">
+                    👤 <span id="userName">User</span>
+                </span>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="mainSidebar">
+            <ul>
+                <li class=" "><a href="customer-dashboard.html">🏠 Dashboard</a></li>
+                <li class=""><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+                <li class=""><a href="marketplace.html">🌐 Marketplace</a></li>
+                <li class=""><a href="projects.html">📋 My Requirements</a></li>
+                <li class=""><a href="received-quotations.html">📨 Received Quotations</a></li>
+                
+                <li class="active"><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+                
+                
+                <li class=""><a href="profile.html">👤 Profile</a></li>
+                <li class=""><a href="settings.html">⚙️ Settings</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+    
+
+<div class="dashboard" id="dashboardLayout">
+    <main class="content">
+        
+
+<div class="notifications-container">
+
+    <div class="header">
+
+        <div>
+
+            <h1>🔔 Notifications</h1>
+
+            <p>
+                Stay updated with your FabBridge activities.
+            </p>
+
+        </div>
+
+        <button
+            id="markAllBtn"
+            class="mark-all-btn"
+        >
+            Mark All as Read
+        </button>
+
+    </div>
+
+
+    <div
+        id="notificationList"
+        class="notification-list"
+    >
+
+        <div class="notification-card">
+
+            <div class="icon">
+                🔄
+            </div>
+
+            <div class="content">
+
+                <h3>
+                    Loading Notifications
+                </h3>
+
+                <p>
+                    Please wait...
+                </p>
+
+                <span>
+                    Just now
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="noNotifications"
+        class="no-notifications"
+        style="display:none;"
+    >
+
+        <div class="empty-icon">
+            🔔
+        </div>
+
+        <h2>
+            No Notifications
+        </h2>
+
+        <p>
+            You don't have any notifications yet.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+
+
+    </main>
+</div>
+
+<script
+    type="module"
+    src="js/notifications.js"
+></script>
+<script type="module" src="js/navigation.js"></script>
+
+</body>
+
+</html>

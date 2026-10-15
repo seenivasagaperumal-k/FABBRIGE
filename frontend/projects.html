@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Requirements | FabBridge</title>
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+<!-- =========================
+     TOPBAR & SIDEBAR WILL BE INJECTED BY navigation.js
+========================= -->
+
+        <header class="topbar">
+            <div class="logo">
+                <span class="hamburger" id="hamburgerMenu">☰</span>
+                FabBridge
+            </div>
+            <div class="topbar-right">
+                <input type="text" id="dashboardSearch" placeholder="Search...">
+                <span class="profile">
+                    👤 <span id="userName">User</span>
+                </span>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="mainSidebar">
+            <ul>
+                <li class=" "><a href="customer-dashboard.html">🏠 Dashboard</a></li>
+                <li class=""><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+                <li class=""><a href="marketplace.html">🌐 Marketplace</a></li>
+                <li class="active"><a href="projects.html">📋 My Requirements</a></li>
+                <li class=""><a href="received-quotations.html">📨 Received Quotations</a></li>
+                
+                <li class=""><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+                
+                
+                <li class=""><a href="profile.html">👤 Profile</a></li>
+                <li class=""><a href="settings.html">⚙️ Settings</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+    
+
+<div class="dashboard" id="dashboardLayout">
+    <main class="content">
+        
+
+
+<div class="page-container">
+
+
+    <!-- ================================
+         HEADER
+    ================================= -->
+
+    <div class="page-header">
+
+        <div>
+
+            <h1>
+                My Requirements
+            </h1>
+
+            <p>
+                View the requirements you have posted.
+            </p>
+
+        </div>
+
+
+        <a
+            href="post_requirement.html"
+            class="new-btn">
+
+            + New Requirement
+
+        </a>
+
+    </div>
+
+
+
+    <!-- ================================
+         REQUIREMENTS TABLE
+    ================================= -->
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>
+                        Requirement
+                    </th>
+
+                    <th>
+                        Category
+                    </th>
+
+                    <th>
+                        Budget
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="requirementsTable">
+
+                <tr>
+
+                    <td
+                        colspan="5"
+                        class="loading">
+
+                        Loading your requirements...
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- ================================
+         EMPTY MESSAGE
+    ================================= -->
+
+    <div
+        id="emptyMessage"
+        class="empty-message"
+        style="display:none;">
+
+        <h2>
+            No Requirements Yet
+        </h2>
+
+        <p>
+            You have not posted any requirements.
+        </p>
+
+
+        <a
+            href="post_requirement.html"
+            class="new-btn">
+
+            + Post Your First Requirement
+
+        </a>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+    </main>
+</div>
+
+<script
+    type="module"
+    src="js/projects.js">
+</script>
+<script type="module" src="js/navigation.js"></script>
+
+</body>
+
+</html>

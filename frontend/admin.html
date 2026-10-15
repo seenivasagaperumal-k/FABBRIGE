@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | FabBridge</title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>FabBridge</h2>
+
+        <p class="admin-label">
+            ADMIN PANEL
+        </p>
+
+        <nav>
+
+    <a href="admin.html" class="active">
+        Dashboard
+    </a>
+
+    <a href="admin-users.html">
+        Users
+    </a>
+
+    <a href="admin-companies.html">
+        Companies
+    </a>
+
+    <a href="admin-requirements.html">
+    Requirements
+</a>
+
+    <a href="admin-quotations.html">
+        Quotations
+    </a>
+
+</nav>
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Admin Dashboard</h1>
+
+                <p>
+                    Manage FabBridge platform
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- Statistics -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <h3>Total Users</h3>
+
+                <p id="totalUsers">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>Total Companies</h3>
+
+                <p id="totalCompanies">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>Total Requirements</h3>
+
+                <p id="totalRequirements">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>Total Quotations</h3>
+
+                <p id="totalQuotations">
+                    0
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Welcome -->
+
+        <section class="welcome-card">
+
+            <h2>
+                Welcome to FabBridge Admin Panel
+            </h2>
+
+            <p>
+                From here you can manage users,
+                manufacturing companies,
+                requirements and quotations.
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="js/admin.js">
+</script>
+
+</body>
+
+</html>

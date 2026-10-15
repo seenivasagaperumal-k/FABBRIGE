@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Users | FabBridge Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin-users.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>FabBridge</h2>
+
+        <p class="admin-label">
+            ADMIN PANEL
+        </p>
+
+    <nav>
+
+    <a href="admin.html">
+        Dashboard
+    </a>
+
+    <a href="admin-users.html"
+       class="active">
+        Users
+    </a>
+
+    <a href="admin-companies.html">
+        Companies
+    </a>
+
+    <a href="admin-requirements.html">
+        Requirements
+    </a>
+
+    <a href="admin-quotations.html">
+        Quotations
+    </a>
+
+</nav>
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Users</h1>
+
+                <p>
+                    Manage registered FabBridge users.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- Search -->
+
+        <section class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by name, company or email">
+
+        </section>
+
+
+        <!-- Users Table -->
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Company</th>
+
+                        <th>Owner</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Role</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="usersTable">
+
+                    <tr>
+
+                        <td
+                            colspan="5"
+                            class="loading">
+
+                            Loading users...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="js/admin-users.js">
+</script>
+
+</body>
+
+</html>

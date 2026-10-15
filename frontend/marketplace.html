@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marketplace | FabBridge</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/marketplace.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<!-- =========================
+     TOPBAR & SIDEBAR WILL BE INJECTED BY navigation.js
+========================= -->
+
+        <header class="topbar">
+            <div class="logo">
+                <span class="hamburger" id="hamburgerMenu">☰</span>
+                FabBridge
+            </div>
+            <div class="topbar-right">
+                <input type="text" id="dashboardSearch" placeholder="Search...">
+                <span class="profile">
+                    👤 <span id="userName">User</span>
+                </span>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="mainSidebar">
+            <ul>
+                <li class=" "><a href="customer-dashboard.html">🏠 Dashboard</a></li>
+                <li class=""><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+                <li class="active"><a href="marketplace.html">🌐 Marketplace</a></li>
+                <li class=""><a href="projects.html">📋 My Requirements</a></li>
+                <li class=""><a href="received-quotations.html">📨 Received Quotations</a></li>
+                
+                <li class=""><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+                
+                <li class=""><a href="profile.html">👤 Profile</a></li>
+                <li class=""><a href="settings.html">⚙️ Settings</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+    
+
+<div class="dashboard" id="dashboardLayout">
+    <main class="content">
+        
+        <!-- Marketplace Page Header -->
+        <header class="page-header">
+            <div class="page-header-content">
+                <div class="page-title-group">
+                    <h1>🌐 FabBridge Marketplace</h1>
+                    <p>
+                        Discover verified manufacturing requirements, browse by industry category, and submit competitive quotations.
+                    </p>
+                </div>
+                <div class="marketplace-post-cta">
+                    <a href="post_requirement.html" class="post-req-btn">➕ Post Requirement</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Bar Section -->
+        <section class="search-section">
+            <div class="search-input-wrapper">
+                <span class="search-icon">🔍</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search requirements by title, category, subcategory, specifications, or company...">
+                <button type="button" id="clearSearchBtn" class="clear-search-btn" style="display: none;" title="Clear search">&times;</button>
+            </div>
+            <button id="searchBtn">
+                Search
+            </button>
+        </section>
+
+        <!-- Category Browser Section -->
+        <section class="category-browser-section">
+            <div class="category-browser-header">
+                <div class="cat-header-title">
+                    <h2>Browse by Manufacturing Category</h2>
+                    <span class="cat-header-subtitle">Filter requirements by specialized manufacturing capabilities</span>
+                </div>
+                <button type="button" id="resetCategoryBtn" class="reset-filter-btn" style="display: none;">
+                    ↺ Clear All Filters
+                </button>
+            </div>
+
+            <!-- Category Cards Grid -->
+            <div class="category-cards-grid" id="categoryCardsGrid">
+                <div class="cat-card-loading">Loading categories...</div>
+            </div>
+
+            <!-- Subcategory Filter Pills Container -->
+            <div class="subcategory-pills-container" id="subcategoryPillsContainer" style="display: none;">
+                <div class="subcategory-pills-header">
+                    <span class="sub-filter-icon">🏷️</span>
+                    <span class="sub-filter-label" id="subFilterLabel">Subcategories:</span>
+                </div>
+                <div class="subcategory-pills-list" id="subcategoryPillsList">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Summary Bar -->
+        <div class="results-summary-bar" id="resultsSummaryBar">
+            <div class="results-count-text" id="resultsCountText">
+                Loading requirements...
+            </div>
+            <div class="active-filter-tags" id="activeFilterTags">
+                <!-- Tag chips -->
+            </div>
+        </div>
+
+        <!-- Requirements Grid -->
+        <section
+            class="company-grid"
+            id="companyGrid">
+
+            <p class="no-results">
+                Loading requirements...
+            </p>
+
+        </section>
+
+        <!-- Requirement Details Modal -->
+        <div
+            id="companyModal"
+            class="modal">
+
+            <div class="modal-content">
+
+                <span
+                    id="closeModal"
+                    class="close"
+                    title="Close">
+                    &times;
+                </span>
+
+                <h2 id="modalTitle">
+                    Requirement
+                </h2>
+
+                <div class="modal-meta-pills" id="modalMetaPills">
+                    <span class="modal-badge-cat" id="modalCategoryBadge"></span>
+                    <span class="modal-badge-sub" id="modalSubcategoryBadge" style="display: none;"></span>
+                </div>
+
+                <div class="modal-info-grid">
+                    <div class="modal-info-item">
+                        <span class="modal-label">Company</span>
+                        <strong id="modalCompany" class="modal-value"></strong>
+                    </div>
+
+                    <div class="modal-info-item">
+                        <span class="modal-label">Category</span>
+                        <span id="modalCategory" class="modal-value"></span>
+                    </div>
+
+                    <div class="modal-info-item" id="modalSubcategoryRow" style="display: none;">
+                        <span class="modal-label">Subcategory</span>
+                        <span id="modalSubcategory" class="modal-value"></span>
+                    </div>
+
+                    <div class="modal-info-item">
+                        <span class="modal-label">Quantity</span>
+                        <span id="modalQuantity" class="modal-value"></span>
+                    </div>
+
+                    <div class="modal-info-item">
+                        <span class="modal-label">Budget</span>
+                        <span class="modal-value budget-text">₹<span id="modalBudget"></span></span>
+                    </div>
+
+                    <div class="modal-info-item">
+                        <span class="modal-label">Deadline</span>
+                        <span id="modalDeadline" class="modal-value"></span>
+                    </div>
+                </div>
+
+                <div class="modal-description-box">
+                    <span class="modal-label">Description & Specifications</span>
+                    <p id="modalDescription" class="modal-description-text"></p>
+                </div>
+
+                <button
+                    id="quoteBtn"
+                    class="close-btn">
+                    Submit Quotation &rarr;
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+</div>
+
+<script
+    type="module"
+    src="js/marketplace.js">
+</script>
+<script type="module" src="js/navigation.js"></script>
+
+</body>
+</html>

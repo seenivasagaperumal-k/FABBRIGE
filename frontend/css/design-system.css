@@ -1,0 +1,669 @@
+/* =====================================================
+   FABBRIDGE - PROFESSIONAL DESIGN SYSTEM & ENHANCED STYLING
+   Industrial-grade B2B Manufacturing Platform Aesthetics
+   ===================================================== */
+
+:root {
+    /* Color Palette */
+    --fb-primary: #2563eb;
+    --fb-primary-hover: #1d4ed8;
+    --fb-primary-light: #eff6ff;
+    --fb-primary-glow: rgba(37, 99, 235, 0.18);
+
+    --fb-navy: #0f172a;
+    --fb-navy-surface: #1e293b;
+    --fb-slate-700: #334155;
+    --fb-slate-600: #475569;
+    --fb-slate-500: #64748b;
+    --fb-slate-400: #94a3b8;
+    --fb-slate-200: #e2e8f0;
+    --fb-slate-100: #f1f5f9;
+    --fb-slate-50: #f8fafc;
+
+    --fb-success: #10b981;
+    --fb-success-dark: #047857;
+    --fb-success-light: #ecfdf5;
+
+    --fb-amber: #f59e0b;
+    --fb-amber-dark: #b45309;
+    --fb-amber-light: #fffbeb;
+
+    --fb-danger: #ef4444;
+    --fb-danger-dark: #b91c1c;
+    --fb-danger-light: #fef2f2;
+
+    /* Typography */
+    --fb-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* Shadows */
+    --fb-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+    --fb-shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.06);
+    --fb-shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --fb-shadow-lg: 0 10px 24px rgba(15, 23, 42, 0.10);
+    --fb-shadow-xl: 0 20px 32px rgba(15, 23, 42, 0.14);
+
+    /* Radii */
+    --fb-radius-sm: 6px;
+    --fb-radius-md: 10px;
+    --fb-radius-lg: 14px;
+    --fb-radius-xl: 18px;
+    --fb-radius-full: 9999px;
+}
+
+/* =====================================================
+   GLOBAL BASE ENHANCEMENTS
+   ===================================================== */
+body {
+    font-family: var(--fb-font);
+    background-color: var(--fb-slate-50);
+    color: var(--fb-navy);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =====================================================
+   TOPBAR
+   ===================================================== */
+.topbar {
+    height: 70px;
+    background: #ffffff !important;
+    color: var(--fb-navy) !important;
+    border-bottom: 1px solid var(--fb-slate-200);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+    padding: 0 32px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.topbar .logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--fb-primary) !important;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.topbar .hamburger {
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--fb-slate-700);
+    padding: 6px;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+.topbar .hamburger:hover {
+    background: var(--fb-slate-100);
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.topbar-right input[type="text"],
+#dashboardSearch {
+    width: 260px;
+    padding: 9px 16px;
+    background: var(--fb-slate-50);
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-full);
+    font-size: 13px;
+    color: var(--fb-navy);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.topbar-right input[type="text"]:focus,
+#dashboardSearch:focus {
+    background: #ffffff;
+    border-color: var(--fb-primary);
+    box-shadow: 0 0 0 3px var(--fb-primary-glow);
+    width: 290px;
+}
+
+.topbar .profile {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: var(--fb-slate-100);
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-full);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--fb-slate-700);
+}
+
+/* =====================================================
+   SIDEBAR
+   ===================================================== */
+.sidebar {
+    width: 260px !important;
+    background: var(--fb-navy) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 18px;
+    min-height: calc(100vh - 70px);
+    position: fixed;
+    left: 0;
+    top: 70px;
+    z-index: 999;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 16px;
+    color: #94a3b8 !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: var(--fb-radius-md);
+    transition: all 0.18s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    transform: translateX(3px);
+}
+
+.sidebar ul li.active a,
+.sidebar ul li.active > a {
+    background: var(--fb-primary) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.sidebar .notification-badge {
+    margin-left: auto;
+    background: var(--fb-danger) !important;
+    color: #ffffff;
+    padding: 2px 7px;
+    border-radius: var(--fb-radius-full);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =====================================================
+   CONTENT AREA & LAYOUT
+   ===================================================== */
+.content {
+    margin-left: 260px !important;
+    width: calc(100% - 260px) !important;
+    padding: 36px 42px !important;
+    min-height: calc(100vh - 70px);
+}
+
+/* Page Titles */
+.content h1,
+.header h1,
+.page-header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--fb-navy);
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.content > p,
+.header p,
+.page-header p {
+    color: var(--fb-slate-500);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =====================================================
+   METRIC / DASHBOARD STAT CARDS
+   ===================================================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 20px !important;
+    margin-bottom: 32px !important;
+}
+
+.card {
+    background: #ffffff !important;
+    border: 1px solid var(--fb-slate-200) !important;
+    border-radius: var(--fb-radius-lg) !important;
+    padding: 24px !important;
+    box-shadow: var(--fb-shadow-sm) !important;
+    transition: all 0.25s ease !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: var(--fb-shadow-md) !important;
+    transform: translateY(-2px);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--fb-primary);
+}
+
+.card h2 {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    color: var(--fb-navy) !important;
+    letter-spacing: -1px;
+    margin-bottom: 4px !important;
+}
+
+.card p {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: var(--fb-slate-500) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* =====================================================
+   TABLES
+   ===================================================== */
+.table-container {
+    background: #ffffff;
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-lg);
+    box-shadow: var(--fb-shadow-sm);
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+}
+
+thead {
+    background: var(--fb-slate-50) !important;
+    color: var(--fb-slate-700) !important;
+    border-bottom: 1px solid var(--fb-slate-200);
+}
+
+th {
+    padding: 14px 18px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--fb-slate-600) !important;
+}
+
+td {
+    padding: 16px 18px !important;
+    border-bottom: 1px solid var(--fb-slate-100);
+    color: var(--fb-slate-700);
+    vertical-align: middle;
+}
+
+tbody tr:hover {
+    background-color: var(--fb-slate-50) !important;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =====================================================
+   STATUS BADGES
+   ===================================================== */
+.status,
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px !important;
+    border-radius: var(--fb-radius-full) !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2px;
+}
+
+.status.waiting,
+.status.pending {
+    background: var(--fb-amber-light) !important;
+    color: var(--fb-amber-dark) !important;
+    border: 1px solid #fde68a;
+}
+
+.status.accepted,
+.status.approved {
+    background: var(--fb-success-light) !important;
+    color: var(--fb-success-dark) !important;
+    border: 1px solid #a7f3d0;
+}
+
+.status.rejected {
+    background: var(--fb-danger-light) !important;
+    color: var(--fb-danger-dark) !important;
+    border: 1px solid #fecaca;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+button,
+.btn {
+    font-family: var(--fb-font);
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+
+.contact-btn,
+.contact-service-btn {
+    background: var(--fb-primary) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 9px 16px !important;
+    border-radius: var(--fb-radius-md) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+}
+
+.contact-btn:hover,
+.contact-service-btn:hover {
+    background: var(--fb-primary-hover) !important;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+.table-track-btn {
+    background: var(--fb-primary) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 7px 14px !important;
+    border-radius: var(--fb-radius-sm) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s;
+}
+
+.table-track-btn:hover {
+    background: var(--fb-primary-hover) !important;
+    transform: translateY(-1px);
+}
+
+/* =====================================================
+   SERVICE CARDS (SHOWCASE POLISH)
+   ===================================================== */
+.service-list {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+    gap: 22px !important;
+}
+
+.service-card {
+    background: #ffffff !important;
+    border: 1px solid var(--fb-slate-200) !important;
+    border-radius: var(--fb-radius-lg) !important;
+    padding: 24px !important;
+    box-shadow: var(--fb-shadow-sm) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.22s ease !important;
+    position: relative;
+}
+
+.service-card:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: var(--fb-shadow-md) !important;
+    transform: translateY(-3px) !important;
+}
+
+.service-card h3 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: var(--fb-navy) !important;
+    margin: 8px 0 !important;
+    line-height: 1.3;
+}
+
+.service-category {
+    background: var(--fb-primary-light) !important;
+    color: var(--fb-primary) !important;
+    font-weight: 600 !important;
+    font-size: 11px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px !important;
+    border-radius: var(--fb-radius-full) !important;
+    border: 1px solid #bfdbfe;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.service-price {
+    font-size: 17px !important;
+    font-weight: 800 !important;
+    color: var(--fb-success-dark) !important;
+    margin: 6px 0 10px 0 !important;
+}
+
+.service-company-tag {
+    font-size: 12.5px;
+    color: var(--fb-slate-600);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--fb-slate-200);
+}
+
+.service-company-tag strong {
+    color: var(--fb-navy);
+}
+
+.service-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--fb-slate-100);
+}
+
+/* =====================================================
+   PROFESSIONAL CONTACT DETAILS MODAL
+   ===================================================== */
+.contact-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+    animation: fbFadeIn 0.2s ease-out;
+}
+
+@keyframes fbFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.contact-modal-box {
+    background: #ffffff;
+    border-radius: var(--fb-radius-xl);
+    width: 100%;
+    max-width: 540px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+    box-shadow: var(--fb-shadow-xl);
+    position: relative;
+    border: 1px solid var(--fb-slate-200);
+    animation: fbSlideUp 0.25s ease-out;
+}
+
+@keyframes fbSlideUp {
+    from { transform: translateY(18px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.contact-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--fb-slate-200);
+    margin-bottom: 18px;
+}
+
+.contact-modal-header h3 {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--fb-navy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-modal-service-badge {
+    background: var(--fb-slate-50);
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-md);
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    font-size: 13px;
+    color: var(--fb-slate-600);
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--fb-slate-50);
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-md);
+    padding: 12px 16px;
+    font-size: 13.5px;
+    color: var(--fb-navy);
+}
+
+.contact-info-item .item-icon {
+    font-size: 18px;
+    color: var(--fb-primary);
+    width: 24px;
+    text-align: center;
+}
+
+.contact-info-item .item-content {
+    flex: 1;
+}
+
+.contact-info-item .item-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--fb-slate-500);
+    font-weight: 700;
+}
+
+.contact-action-link {
+    color: var(--fb-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.15s;
+}
+
+.contact-action-link:hover {
+    color: var(--fb-primary-hover);
+    text-decoration: underline;
+}
+
+.contact-not-provided {
+    color: var(--fb-slate-400);
+    font-style: italic;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ===================================================== */
+@media (max-width: 992px) {
+    .content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 24px 20px !important;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@media (max-width: 640px) {
+    .topbar {
+        padding: 0 16px !important;
+    }
+
+    .topbar-right input[type="text"],
+    #dashboardSearch {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr !important;
+    }
+}

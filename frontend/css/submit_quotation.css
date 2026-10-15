@@ -1,0 +1,119 @@
+/* =====================================================
+   FABBRIDGE - SUBMIT QUOTATION (SUBMIT_QUOTATION.CSS)
+   Enterprise B2B Quotation Submission
+   ===================================================== */
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.form-box {
+    width: 100%;
+    background: #ffffff;
+    padding: 36px 40px;
+    border-radius: var(--fb-radius-lg);
+    border: 1px solid var(--fb-slate-200);
+    box-shadow: var(--fb-shadow-sm);
+    box-sizing: border-box;
+}
+
+.form-box h1 {
+    color: var(--fb-navy);
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.form-box > p {
+    color: var(--fb-slate-500);
+    font-size: 14px;
+    margin-bottom: 28px;
+    line-height: 1.5;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--fb-navy);
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-md);
+    font-size: 14px;
+    color: var(--fb-navy);
+    font-family: var(--fb-font);
+    background: #ffffff;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--fb-primary);
+    box-shadow: 0 0 0 3px var(--fb-primary-glow);
+}
+
+.input-group input[readonly],
+.input-group textarea[readonly] {
+    background: var(--fb-slate-50);
+    color: var(--fb-slate-600);
+    border-color: var(--fb-slate-200);
+    cursor: default;
+}
+
+.input-group input[readonly]:focus,
+.input-group textarea[readonly]:focus {
+    box-shadow: none;
+    border-color: var(--fb-slate-200);
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"],
+#submitBtn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: var(--fb-radius-md);
+    background: var(--fb-primary);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
+    font-family: var(--fb-font);
+}
+
+button[type="submit"]:hover,
+#submitBtn:hover {
+    background: var(--fb-primary-hover);
+    box-shadow: 0 5px 14px rgba(37, 99, 235, 0.35);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .form-box {
+        padding: 24px 20px;
+    }
+}

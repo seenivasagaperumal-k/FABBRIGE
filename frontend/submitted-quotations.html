@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Submitted Quotations | FabBridge</title>
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/manufacturing-tracking.css">
+    <link rel="stylesheet" href="css/submitted-quotations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<!-- =========================
+     TOPBAR & SIDEBAR WILL BE INJECTED BY navigation.js
+========================= -->
+
+        <header class="topbar">
+            <div class="logo">
+                <span class="hamburger" id="hamburgerMenu">☰</span>
+                FabBridge
+            </div>
+            <div class="topbar-right">
+                <input type="text" id="dashboardSearch" placeholder="Search...">
+                <span class="profile">
+                    👤 <span id="userName">User</span>
+                </span>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="mainSidebar">
+            <ul>
+                <li class=" "><a href="customer-dashboard.html">🏠 Dashboard</a></li>
+                <li class=""><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+                <li class=""><a href="marketplace.html">🌐 Marketplace</a></li>
+                <li class=""><a href="projects.html">📋 My Requirements</a></li>
+                <li class=""><a href="received-quotations.html">📨 Received Quotations</a></li>
+                
+                <li class=""><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+                
+                
+                <li class=""><a href="profile.html">👤 Profile</a></li>
+                <li class=""><a href="settings.html">⚙️ Settings</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+    
+
+<div class="dashboard" id="dashboardLayout">
+    <main class="content">
+        
+
+<div class="page-container">
+
+    <div class="page-header">
+
+        <div>
+
+            <h1>
+                📤 Submitted Quotations
+            </h1>
+
+            <p>
+                Track the quotations submitted by your company.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Customer / Company</th>
+
+                    <th>Requirement</th>
+
+                    <th>Price</th>
+
+                    <th>Delivery</th>
+
+                    
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="quotationTable">
+
+                <tr>
+
+                    <td
+                        colspan="7"
+                        style="text-align:center;padding:40px;"
+                    >
+
+                        Loading quotations...
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+
+
+
+    </main>
+</div>
+
+<script
+    type="module"
+    src="js/submitted-quotations.js">
+</script>
+<script type="module" src="js/navigation.js"></script>
+
+</body>
+
+</html>

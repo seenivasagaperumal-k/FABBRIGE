@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Dashboard | FabBridge</title>
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/manufacturing-tracking.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- =========================
+     TOPBAR
+========================= -->
+
+        <header class="topbar">
+            <div class="logo">
+                <span class="hamburger" id="hamburgerMenu">☰</span>
+                FabBridge
+            </div>
+            <div class="topbar-right">
+                <input type="text" id="dashboardSearch" placeholder="Search...">
+                <span class="profile">
+                    👤 <span id="userName">User</span>
+                </span>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="mainSidebar">
+            <ul>
+                <li class="active "><a href="dashboard.html">🏠 Dashboard</a></li>
+                <li class=""><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+                <li class=""><a href="marketplace.html">🌐 Marketplace</a></li>
+                <li class=""><a href="projects.html">📋 My Requirements</a></li>
+                <li class=""><a href="received-quotations.html">📨 Received Quotations</a></li>
+                <li class=""><a href="submitted-quotations.html">📤 Submitted Quotations</a></li>
+                <li class=""><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+                <li class=""><a href="products.html">📦 Products</a></li>
+                <li class=""><a href="services.html">🛠️ Services</a></li>
+                <li class=""><a href="profile.html">👤 Profile</a></li>
+                <li class=""><a href="settings.html">⚙️ Settings</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+    
+
+<!-- =========================
+     DASHBOARD
+========================= -->
+<div class="dashboard">
+
+
+    <!-- =====================
+         SIDEBAR
+    ====================== -->
+
+    
+
+
+    <!-- =====================
+         MAIN CONTENT
+    ====================== -->
+
+    <main class="content">
+
+
+        <!-- =================
+             WELCOME
+        ================== -->
+        <div class="welcome-section">
+            <h1>
+                Welcome,
+                <span id="welcomeName">
+                    Loading...
+                </span>
+                👋
+            </h1>
+            <p>
+                Manage your company requirements, quotations, products and services from one central dashboard.
+            </p>
+        </div>
+
+        <!-- =================
+             QUICK ACTIONS
+        ================== -->
+        <div class="quick-actions-bar">
+            <a href="marketplace.html" class="quick-action-btn primary-action">
+                <span>🌐</span> Browse Marketplace Requirements
+            </a>
+            <a href="tracking.html" class="quick-action-btn">
+                <span>🏭</span> Manufacturing Tracking
+            </a>
+            <a href="products.html" class="quick-action-btn">
+                <span>📦</span> Manage Products
+            </a>
+            <a href="services.html" class="quick-action-btn">
+                <span>🛠️</span> Manage Services
+            </a>
+        </div>
+
+        <!-- =================
+             DASHBOARD CARDS
+        ================== -->
+
+        <div class="cards">
+
+            <!-- REQUIREMENTS -->
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <div>
+                    <h2 id="totalRequirements">0</h2>
+                    <p>My Requirements</p>
+                </div>
+            </div>
+
+            <!-- RECEIVED QUOTATIONS -->
+            <div class="card">
+                <div class="card-icon">📨</div>
+                <div>
+                    <h2 id="receivedQuotations">0</h2>
+                    <p>Received Quotations</p>
+                </div>
+            </div>
+
+            <!-- SUBMITTED QUOTATIONS -->
+            <div class="card">
+                <div class="card-icon">📤</div>
+                <div>
+                    <h2 id="submittedQuotations">0</h2>
+                    <p>Submitted Quotations</p>
+                </div>
+            </div>
+
+            <!-- PRODUCTS / SERVICES -->
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <div>
+                    <h2 id="totalServices">0</h2>
+                    <p>Products &amp; Services</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        
+        
+
+        <!-- =================
+             RECENT ACTIVITY
+        ================== -->
+
+        <div class="recent">
+
+            <h2>
+                Recent Activity
+            </h2>
+
+
+            <ul id="recentActivity">
+
+                <li>
+                    Loading activity...
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- =================
+             FIND COMPANIES
+        ================== -->
+
+        <section
+            id="companySearchSection"
+            class="company-search-section">
+
+
+            <div class="company-search-header">
+
+                <h2>
+                    🔎 Find Companies
+                </h2>
+
+                <p>
+                    Discover manufacturing companies
+                    and explore their products and services.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="company-search-box">
+
+                <input
+                    type="text"
+                    id="companySearchInput"
+                    placeholder="Search companies..."
+                    autocomplete="off">
+
+            </div>
+
+
+            <!-- COMPANY LIST -->
+
+            <div
+                id="companyList"
+                class="company-list">
+
+                <!-- Companies will appear here -->
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script
+    type="module"
+    src="js/dashboard.js">
+</script>
+
+
+    <script type="module" src="js/navigation.js"></script>
+</body>
+
+</html>

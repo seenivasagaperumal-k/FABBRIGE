@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Requirements | FabBridge Admin</title>
+
+    <link rel="stylesheet"
+          href="css/admin-requirements.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>FabBridge</h2>
+
+        <p class="admin-label">
+            ADMIN PANEL
+        </p>
+
+        <nav>
+
+            <a href="admin.html">
+                Dashboard
+            </a>
+
+            <a href="admin-users.html">
+                Users
+            </a>
+
+            <a href="admin-companies.html">
+                Companies
+            </a>
+
+            <a href="admin-requirements.html">
+                Requirements
+            </a>
+
+            <a href="admin-quotations.html">
+                Quotations
+            </a>
+
+        </nav>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <h1>
+                Requirements
+            </h1>
+
+            <p>
+                View all customer requirements.
+            </p>
+
+        </header>
+
+
+        <!-- Search -->
+
+        <section class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search requirement, customer or category">
+
+        </section>
+
+
+        <!-- Table -->
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Customer</th>
+
+                        <th>Requirement</th>
+
+                        <th>Category</th>
+
+                        <th>Quantity</th>
+
+                        <th>Budget</th>
+
+                        <th>Deadline</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="requirementsTable">
+
+                    <tr>
+
+                        <td colspan="7"
+                            class="loading">
+
+                            Loading requirements...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script
+    type="module"
+    src="js/admin-requirements.js">
+</script>
+
+</body>
+</html>

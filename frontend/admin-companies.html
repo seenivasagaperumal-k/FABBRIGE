@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Companies | FabBridge Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin-companies.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+
+    <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+
+        <h2>FabBridge</h2>
+
+        <p class="admin-label">
+            ADMIN PANEL
+        </p>
+
+
+        <nav>
+
+            <a href="admin.html">
+                Dashboard
+            </a>
+
+
+            <a href="admin-users.html">
+                Users
+            </a>
+
+
+            <a
+                href="admin-companies.html"
+                class="active">
+
+                Companies
+
+            </a>
+
+
+            <a href="admin-requirements.html">
+                Requirements
+            </a>
+
+
+            <a href="admin-quotations.html">
+                Quotations
+            </a>
+
+        </nav>
+
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </aside>
+
+
+
+    <!-- ========================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ========================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Companies
+                </h1>
+
+                <p>
+                    Manage registered manufacturing companies.
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ========================= -->
+        <!-- SEARCH -->
+        <!-- ========================= -->
+
+        <section class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search company, owner or email">
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- COMPANIES TABLE -->
+        <!-- ========================= -->
+
+        <section class="table-container">
+
+            <table>
+
+
+                <!-- TABLE HEADER -->
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Company
+                        </th>
+
+
+                        <th>
+                            Owner
+                        </th>
+
+
+                        <th>
+                            Email
+                        </th>
+
+
+                        <th>
+                            Phone
+                        </th>
+
+
+                        <th>
+                            Role
+                        </th>
+
+
+                        <th>
+                            Status
+                        </th>
+
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+
+                <!-- TABLE BODY -->
+
+                <tbody id="companiesTable">
+
+                    <tr>
+
+                        <td
+                            colspan="7"
+                            class="loading">
+
+                            Loading companies...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+
+            </table>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script
+        type="module"
+        src="js/admin-companies.js">
+    </script>
+
+
+</body>
+
+</html>

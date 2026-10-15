@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Tracking | FabBridge</title>
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/manufacturing-tracking.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TOPBAR
+    ===================================================== -->
+    <header class="topbar">
+        <div class="logo">
+            <span class="hamburger" id="hamburgerMenu">☰</span>
+            FabBridge
+        </div>
+        <div class="topbar-right">
+            <input type="text" id="dashboardSearch" placeholder="Search orders...">
+            <span class="profile">
+                👤 <span id="userName">User</span>
+            </span>
+        </div>
+    </header>
+
+    <!-- =====================================================
+         SIDEBAR
+    ===================================================== -->
+    <aside class="sidebar" id="mainSidebar">
+        <ul>
+            <li id="navDashboard"><a href="customer-dashboard.html" id="dashboardNavLink">🏠 Dashboard</a></li>
+            <li class="active"><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+            <li><a href="marketplace.html">🌐 Marketplace</a></li>
+            <li><a href="projects.html">📋 My Requirements</a></li>
+            <li><a href="received-quotations.html">📨 Received Quotations</a></li>
+            <li id="navSubmittedQuotations" style="display:none;"><a href="submitted-quotations.html">📤 Submitted Quotations</a></li>
+            <li><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+            <li id="navProducts" style="display:none;"><a href="products.html">📦 Products</a></li>
+            <li><a href="services.html">🛠️ Services</a></li>
+            <li><a href="profile.html">👤 Profile</a></li>
+            <li><a href="settings.html">⚙️ Settings</a></li>
+            <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ===================================================== -->
+    <div class="dashboard">
+        <main class="content">
+
+            <!-- PAGE HEADER -->
+            <div class="page-header" style="margin-bottom: 24px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px;">
+                    <div>
+                        <h1 style="display: flex; align-items: center; gap: 10px; font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">
+                            <span>🏭</span> Manufacturing Process Tracking
+                        </h1>
+                        <p style="color: #64748b; font-size: 15px;">
+                            Track live production stages, inspection milestones, and delivery updates for confirmed orders.
+                        </p>
+                    </div>
+
+                    <!-- Role Badge / Summary -->
+                    <div id="trackingRoleIndicator" style="display: flex; align-items: center; gap: 10px;">
+                        <span class="badge" id="roleBadge" style="background: #eff6ff; color: #1e40af; padding: 7px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; border: 1px solid #bfdbfe;">
+                            Loading role...
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MANUFACTURING TRACKING CONTAINER -->
+            <section class="manufacturing-tracking-section" style="border: none; padding: 0; box-shadow: none; background: transparent;">
+                <div id="trackingOrdersContainer" class="manufacturing-tracking-container">
+                    <div class="tracking-loading">
+                        <div style="font-size: 28px; margin-bottom: 8px;">⏳</div>
+                        Loading manufacturing orders...
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="js/tracking.js"></script>
+    <script type="module" src="js/navigation.js"></script>
+
+</body>
+
+</html>

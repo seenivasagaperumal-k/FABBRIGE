@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Company Profile | FabBridge</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .topbar {
+            height: 72px;
+            background: #2864e8;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 40px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            background: white;
+            color: #2864e8;
+
+            border: none;
+            border-radius: 8px;
+
+            padding: 10px 18px;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            background: #eef3ff;
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .container {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+
+        /* =========================
+           PROFILE CARD
+        ========================= */
+
+        .profile-card {
+            background: white;
+
+            border-radius: 16px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.08);
+
+            margin-bottom: 30px;
+        }
+
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .company-icon {
+            width: 80px;
+            height: 80px;
+
+            border-radius: 50%;
+
+            background: #eaf0ff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 40px;
+        }
+
+
+        .company-info h1 {
+            color: #245be0;
+            font-size: 32px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .company-info p {
+            color: #64748b;
+            margin: 5px 0;
+        }
+
+
+        /* =========================
+           PROFILE DETAILS
+        ========================= */
+
+        .details-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .detail-box {
+            background: #f7f9fc;
+
+            padding: 18px;
+
+            border-radius: 10px;
+        }
+
+
+        .detail-box h3 {
+            font-size: 16px;
+
+            color: #334155;
+
+            margin-bottom: 7px;
+        }
+
+
+        .detail-box p {
+            color: #475569;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+            background: white;
+
+            border-radius: 16px;
+
+            padding: 30px;
+
+            margin-bottom: 30px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .section h2 {
+            color: #245be0;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           PRODUCTS / SERVICES GRID
+        ========================= */
+
+        .items-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .product-card,
+        .service-card {
+
+            background: #f8fafc;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            transition: 0.2s;
+        }
+
+
+        .product-card:hover,
+        .service-card:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .product-card h3,
+        .service-card h3 {
+
+            color: #1d4ed8;
+
+            margin-bottom: 12px;
+        }
+
+
+        .product-card p,
+        .service-card p {
+
+            color: #64748b;
+
+            margin: 7px 0;
+
+            line-height: 1.5;
+        }
+
+
+        .empty-message {
+
+            color: #64748b;
+
+            padding: 15px 0;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .items-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .topbar {
+                padding: 0 15px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            .profile-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .items-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+<!-- =========================
+     TOPBAR & SIDEBAR WILL BE INJECTED BY navigation.js
+========================= -->
+
+        <header class="topbar">
+            <div class="logo">
+                <span class="hamburger" id="hamburgerMenu">☰</span>
+                FabBridge
+            </div>
+            <div class="topbar-right">
+                <input type="text" id="dashboardSearch" placeholder="Search...">
+                <span class="profile">
+                    👤 <span id="userName">User</span>
+                </span>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="mainSidebar">
+            <ul>
+                <li class=" "><a href="dashboard.html">🏠 Dashboard</a></li>
+                <li class=""><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+                <li class=""><a href="marketplace.html">🌐 Marketplace</a></li>
+                <li class=""><a href="projects.html">📋 My Requirements</a></li>
+                <li class=""><a href="received-quotations.html">📨 Received Quotations</a></li>
+                <li class=""><a href="submitted-quotations.html">📤 Submitted Quotations</a></li>
+                <li class=""><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+                <li class=""><a href="products.html">📦 Products</a></li>
+                <li class=""><a href="services.html">🛠️ Services</a></li>
+                <li class=""><a href="profile.html">👤 Profile</a></li>
+                <li class=""><a href="settings.html">⚙️ Settings</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+    
+
+<div class="dashboard" id="dashboardLayout">
+    <main class="content">
+        
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<header class="topbar">
+
+    <div class="logo">
+        FabBridge
+    </div>
+
+    <button
+        class="back-btn"
+        onclick="history.back()">
+
+        ← Back
+
+    </button>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN CONTAINER
+========================= -->
+
+<main class="container">
+
+
+    <!-- =========================
+         COMPANY PROFILE
+    ========================= -->
+
+    <section class="profile-card">
+
+
+        <div class="profile-header">
+
+
+            <div class="company-icon">
+                🏭
+            </div>
+
+
+            <div class="company-info">
+
+                <h1 id="companyName">
+                    Loading...
+                </h1>
+
+
+                <p>
+                    👤
+                    <span id="companyOwner">
+                        Loading...
+                    </span>
+                </p>
+
+
+                <p>
+                    📧
+                    <span id="companyEmail">
+                        Loading...
+                    </span>
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             DETAILS
+        ====================== -->
+
+        <div class="details-grid">
+
+
+            <div class="detail-box">
+
+                <h3>
+                    📞 Phone
+                </h3>
+
+                <p id="phone">
+                    Loading...
+                </p>
+
+            </div>
+
+
+
+            <div class="detail-box">
+
+                <h3>
+                    📍 Location
+                </h3>
+
+                <p id="location">
+                    Loading...
+                </p>
+
+            </div>
+
+
+
+            <div class="detail-box">
+
+                <h3>
+                    🏢 Company Type
+                </h3>
+
+                <p id="companyType">
+                    Loading...
+                </p>
+
+            </div>
+
+
+
+            <div class="detail-box">
+
+                <h3>
+                    📝 About
+                </h3>
+
+                <p id="about">
+                    Loading...
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================= -->
+
+    <section class="section">
+
+        <h2>
+            📦 Products
+        </h2>
+
+
+        <div
+            id="productsContainer"
+            class="items-grid">
+
+            <p class="empty-message">
+                Loading products...
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section class="section">
+
+        <h2>
+            🛠️ Services
+        </h2>
+
+
+        <div
+            id="servicesContainer"
+            class="items-grid">
+
+            <p class="empty-message">
+                Loading services...
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+
+
+
+
+    </main>
+</div>
+
+<script
+    type="module"
+    src="js/company-profile.js">
+</script>
+<script type="module" src="js/navigation.js"></script>
+
+</body>
+
+</html>

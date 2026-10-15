@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Products | FabBridge</title>
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+<!-- =========================
+     TOPBAR & SIDEBAR WILL BE INJECTED BY navigation.js
+========================= -->
+
+        <header class="topbar">
+            <div class="logo">
+                <span class="hamburger" id="hamburgerMenu">☰</span>
+                FabBridge
+            </div>
+            <div class="topbar-right">
+                <input type="text" id="dashboardSearch" placeholder="Search...">
+                <span class="profile">
+                    👤 <span id="userName">User</span>
+                </span>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="mainSidebar">
+            <ul>
+                <li class=" "><a href="customer-dashboard.html">🏠 Dashboard</a></li>
+                <li class=""><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+                <li class=""><a href="marketplace.html">🌐 Marketplace</a></li>
+                <li class=""><a href="projects.html">📋 My Requirements</a></li>
+                <li class=""><a href="received-quotations.html">📨 Received Quotations</a></li>
+                
+                <li class=""><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+                
+                
+                <li class=""><a href="profile.html">👤 Profile</a></li>
+                <li class=""><a href="settings.html">⚙️ Settings</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+    
+
+<div class="dashboard" id="dashboardLayout">
+    <main class="content">
+        
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div>
+
+        <h1>📦 Products</h1>
+
+        <p>
+            Manage your company's products.
+        </p>
+
+    </div>
+
+
+    <div class="header-actions">
+
+        <button
+            id="addProductBtn"
+            class="add-product-btn"
+        >
+            + Add Product
+        </button>
+
+
+        <a
+            href="dashboard.html"
+            class="back-btn"
+        >
+            ← Dashboard
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="container">
+
+
+    <!-- =====================
+         ADD PRODUCT FORM
+         HIDDEN BY DEFAULT
+    ====================== -->
+
+    <section
+        id="productFormCard"
+        class="form-card hidden"
+    >
+
+        <div class="form-header">
+
+            <div>
+
+                <h2>
+                    Add New Product
+                </h2>
+
+                <p>
+                    Add a product offered or
+                    manufactured by your company.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="closeFormBtn"
+                class="close-btn"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <form id="productForm">
+
+
+            <!-- PRODUCT NAME -->
+
+            <div class="form-group">
+
+                <label for="productName">
+                    Product Name
+                </label>
+
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Enter product name"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- CATEGORY -->
+
+            <div class="form-group">
+
+                <label for="category">
+                    Category
+                </label>
+
+                <select
+                    id="category"
+                    required
+                >
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Sheet Metal">
+                        Sheet Metal
+                    </option>
+
+                    <option value="CNC">
+                        CNC
+                    </option>
+
+                    <option value="Fabrication">
+                        Fabrication
+                    </option>
+
+                    <option value="Electrical">
+                        Electrical
+                    </option>
+
+                    <option value="Automotive">
+                        Automotive
+                    </option>
+
+                    <option value="Plastic">
+                        Plastic
+                    </option>
+
+                    <option value="Textile">
+                        Textile
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="form-group">
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    rows="4"
+                    placeholder="Describe your product"
+                    required
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- PRICE + QUANTITY -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="price">
+                        Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="price"
+                        min="0"
+                        placeholder="₹ Product price"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="quantity">
+                        Available Quantity
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        min="0"
+                        placeholder="Quantity"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FORM ACTIONS -->
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    id="cancelBtn"
+                    class="cancel-btn"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                    class="submit-btn"
+                >
+                    ➕ Add Product
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =====================
+         MY PRODUCTS
+    ====================== -->
+
+    <section class="products-section">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>
+                    My Products
+                </h2>
+
+                <p>
+                    Products added by your company.
+                </p>
+
+            </div>
+
+
+            <span
+                id="productCount"
+                class="product-count"
+            >
+                0 Products
+            </span>
+
+        </div>
+
+
+
+        <!-- PRODUCT LIST -->
+
+        <div
+            id="productsList"
+            class="products-list"
+        >
+
+            <div class="loading">
+
+                Loading products...
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+
+
+
+
+    </main>
+</div>
+
+<script
+    type="module"
+    src="js/products.js"
+></script>
+<script type="module" src="js/navigation.js"></script>
+
+</body>
+
+</html>

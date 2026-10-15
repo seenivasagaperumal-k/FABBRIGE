@@ -1,0 +1,158 @@
+/* =====================================================
+   FABBRIDGE - POST REQUIREMENT (POST_REQUIREMENT.CSS)
+   Enterprise B2B Requirement Form
+   ===================================================== */
+
+.container {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.form-box {
+    width: 100%;
+    background: #ffffff;
+    padding: 36px 40px;
+    border-radius: var(--fb-radius-lg);
+    border: 1px solid var(--fb-slate-200);
+    box-shadow: var(--fb-shadow-sm);
+    box-sizing: border-box;
+}
+
+.form-box h1 {
+    color: var(--fb-navy);
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.form-box > p {
+    color: var(--fb-slate-500);
+    font-size: 14px;
+    margin-bottom: 28px;
+    line-height: 1.5;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    margin-bottom: 7px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--fb-navy);
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    padding: 12px 14px;
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-md);
+    font-size: 14px;
+    color: var(--fb-navy);
+    outline: none;
+    font-family: var(--fb-font);
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: var(--fb-primary);
+    box-shadow: 0 0 0 3px var(--fb-primary-glow);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: var(--fb-slate-400);
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.input-group input[type="file"] {
+    padding: 9px;
+    font-size: 13px;
+    background: var(--fb-slate-50);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.required-star {
+    color: var(--fb-danger);
+    font-weight: 700;
+}
+
+.sub-helper {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--fb-slate-400);
+    margin-left: 4px;
+}
+
+.input-group select:disabled {
+    background-color: var(--fb-slate-100);
+    color: var(--fb-slate-400);
+    cursor: not-allowed;
+    border-color: var(--fb-slate-200);
+}
+
+button[type="submit"],
+.form-box button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 13px 20px;
+    border: none;
+    background: var(--fb-primary);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: var(--fb-radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.25);
+    font-family: var(--fb-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+button[type="submit"]:hover:not(:disabled),
+.form-box button:hover:not(:disabled) {
+    background: var(--fb-primary-hover);
+    box-shadow: 0 5px 14px rgba(37, 99, 235, 0.35);
+    transform: translateY(-1px);
+}
+
+button[type="submit"]:disabled,
+.form-box button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .form-box {
+        padding: 24px 20px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

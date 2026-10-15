@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Account Settings | FabBridge</title>
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<!-- =========================
+     TOPBAR & SIDEBAR WILL BE INJECTED BY navigation.js
+========================= -->
+
+        <header class="topbar">
+            <div class="logo">
+                <span class="hamburger" id="hamburgerMenu">☰</span>
+                FabBridge
+            </div>
+            <div class="topbar-right">
+                <input type="text" id="dashboardSearch" placeholder="Search...">
+                <span class="profile">
+                    👤 <span id="userName">User</span>
+                </span>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="mainSidebar">
+            <ul>
+                <li class=" "><a href="customer-dashboard.html">🏠 Dashboard</a></li>
+                <li class=""><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+                <li class=""><a href="marketplace.html">🌐 Marketplace</a></li>
+                <li class=""><a href="projects.html">📋 My Requirements</a></li>
+                <li class=""><a href="received-quotations.html">📨 Received Quotations</a></li>
+                
+                <li class=""><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+                
+                
+                <li class=""><a href="profile.html">👤 Profile</a></li>
+                <li class="active"><a href="settings.html">⚙️ Settings</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+    
+
+<div class="dashboard" id="dashboardLayout">
+    <main class="content">
+        
+
+<div class="settings-card">
+
+    <h1>⚙️ Account Settings</h1>
+
+    <p>
+        Manage your FabBridge account preferences.
+    </p>
+
+
+    <!-- EMAIL -->
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>
+                Email Notifications
+            </h3>
+
+            <small>
+                Receive quotation and project updates.
+            </small>
+
+        </div>
+
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                id="emailNotifications">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+
+    <!-- SMS -->
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>
+                SMS Notifications
+            </h3>
+
+            <small>
+                Receive important alerts on your phone.
+            </small>
+
+        </div>
+
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                id="smsNotifications">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+
+    <!-- DARK MODE -->
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>
+                Dark Mode
+            </h3>
+
+            <small>
+                Enable dark theme (UI only).
+            </small>
+
+        </div>
+
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                id="darkMode">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+
+    <!-- CHANGE PASSWORD -->
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>
+                Change Password
+            </h3>
+
+            <small>
+                Update your account password.
+            </small>
+
+        </div>
+
+
+        <button
+            class="action-btn"
+            id="changePasswordBtn">
+
+            Change
+
+        </button>
+
+    </div>
+
+
+    <!-- DELETE ACCOUNT -->
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>
+                Delete Account
+            </h3>
+
+            <small>
+                Permanently remove your account.
+            </small>
+
+        </div>
+
+
+        <button
+            class="delete-btn"
+            id="deleteAccountBtn">
+
+            Delete
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+
+    </main>
+</div>
+
+<script
+    type="module"
+    src="js/settings.js">
+</script>
+<script type="module" src="js/navigation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+/* =====================================================
+   FABBRIDGE - NOTIFICATIONS (NOTIFICATIONS.CSS)
+   Enterprise B2B Notification Center
+   ===================================================== */
+
+.notifications-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Header */
+.notifications-container .header {
+    width: 100%;
+    background: transparent;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid var(--fb-slate-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+.notifications-container .header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--fb-navy);
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.notifications-container .header p {
+    color: var(--fb-slate-500);
+    font-size: 14px;
+    margin: 0;
+}
+
+.mark-all-btn {
+    border: none;
+    background: var(--fb-primary);
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: var(--fb-radius-md);
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+    transition: all 0.2s ease;
+    font-family: var(--fb-font);
+    white-space: nowrap;
+}
+
+.mark-all-btn:hover {
+    background: var(--fb-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+/* Notification List */
+.notification-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0;
+}
+
+/* Notification Card */
+.notification-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-lg);
+    padding: 20px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    box-shadow: var(--fb-shadow-xs);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.notification-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: var(--fb-shadow-sm);
+    transform: translateY(-1px);
+}
+
+.notification-card.unread {
+    border-left: 4px solid var(--fb-primary);
+    background: #f8fbff;
+}
+
+/* Icon */
+.notification-card .icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: var(--fb-radius-md);
+    background: var(--fb-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--fb-primary);
+}
+
+/* Content */
+.notification-card .content {
+    flex: 1;
+}
+
+.notification-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--fb-navy);
+    margin: 0 0 6px 0;
+}
+
+.notification-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--fb-slate-600);
+    margin: 0 0 8px 0;
+}
+
+.notification-card span {
+    font-size: 12px;
+    color: var(--fb-slate-400);
+    font-weight: 500;
+}
+
+/* Actions */
+.notification-actions {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.read-btn {
+    border: none;
+    background: var(--fb-success);
+    color: #ffffff;
+    padding: 7px 13px;
+    border-radius: var(--fb-radius-sm);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.read-btn:hover {
+    background: var(--fb-success-dark);
+}
+
+.read-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: var(--fb-radius-sm);
+    background: var(--fb-success-light);
+    color: var(--fb-success-dark) !important;
+    font-size: 11.5px !important;
+    font-weight: 700;
+}
+
+.delete-btn {
+    border: 1px solid #fecaca;
+    background: #ffffff;
+    color: var(--fb-danger);
+    padding: 7px 13px;
+    border-radius: var(--fb-radius-sm);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.delete-btn:hover {
+    background: var(--fb-danger-light);
+}
+
+/* Empty State */
+.no-notifications {
+    width: 100%;
+    min-height: 320px;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #ffffff;
+    border: 1px dashed var(--fb-slate-200);
+    border-radius: var(--fb-radius-lg);
+    box-sizing: border-box;
+}
+
+.empty-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--fb-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.no-notifications h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--fb-navy);
+    margin-bottom: 6px;
+}
+
+.no-notifications p {
+    font-size: 14px;
+    color: var(--fb-slate-500);
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .notifications-container .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .mark-all-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .notification-card {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .notification-actions {
+        flex-wrap: wrap;
+    }
+}

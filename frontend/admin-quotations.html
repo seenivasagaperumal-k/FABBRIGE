@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Quotations | FabBridge Admin</title>
+
+    <link rel="stylesheet"
+          href="css/admin-quotations.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>FabBridge</h2>
+
+        <p class="admin-label">
+            ADMIN PANEL
+        </p>
+
+        <nav>
+
+            <a href="admin.html">
+                Dashboard
+            </a>
+
+            <a href="admin-users.html">
+                Users
+            </a>
+
+            <a href="admin-companies.html">
+                Companies
+            </a>
+
+            <a href="admin-requirements.html">
+                Requirements
+            </a>
+
+            <a href="admin-quotations.html"
+               class="active">
+                Quotations
+            </a>
+
+        </nav>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <h1>Quotations</h1>
+
+            <p>
+                Manage all quotations submitted through FabBridge.
+            </p>
+
+        </header>
+
+        <!-- Search -->
+
+        <section class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search company, customer or requirement">
+
+        </section>
+
+        <!-- Table -->
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Company</th>
+
+                        <th>Customer</th>
+
+                        <th>Requirement</th>
+
+                        <th>Price</th>
+
+                        <th>Delivery</th>
+
+                        <th>Rating</th>
+
+                        <th>Status</th>
+
+                        
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="quotationsTable">
+
+                    <tr>
+
+                        <td colspan="8"
+                            class="loading">
+
+                            Loading Quotations...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script
+    type="module"
+    src="js/admin-quotations.js">
+</script>
+
+</body>
+</html>

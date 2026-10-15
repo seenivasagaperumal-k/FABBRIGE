@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | FabBridge</title>
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-box" style="max-width: 520px;">
+
+        <h2 class="brand">🌐 FabBridge</h2>
+
+        <h1>Create Account</h1>
+
+        <p>Join the FabBridge Manufacturing Collaboration Network</p>
+
+        <form id="registerForm">
+
+            <div class="input-group">
+                <label for="companyName">Company / Business Name</label>
+                <input
+                    type="text"
+                    id="companyName"
+                    placeholder="Enter company or organization name"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label for="ownerName">Owner / Representative Name</label>
+                <input
+                    type="text"
+                    id="ownerName"
+                    placeholder="Enter your full name"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="name@company.com"
+                    autocomplete="email"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="+91 98765 43210"
+                    autocomplete="tel"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label for="userType">Account Type</label>
+                <select id="userType" required>
+                    <option value="">Choose Account Type</option>
+                    <option value="company">🏭 Company / Manufacturer</option>
+                    <option value="customer">👤 Customer / Client</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Create secure password"
+                    autocomplete="new-password"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Re-enter password"
+                    autocomplete="new-password"
+                    required>
+            </div>
+
+            <button type="submit" class="login-btn">
+                Create Account &rarr;
+            </button>
+
+        </form>
+
+        <div class="extra-links">
+            <p>
+                Already have an account?
+                <a href="login.html">
+                    Sign In
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="js/register.js"></script>
+
+</body>
+
+</html>

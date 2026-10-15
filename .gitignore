@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Local Backups
+frontend_backup*/
+*.bak
+*.tmp
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Operating System Files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Scratch & Temporary scripts
+scratch/
+check_files.js
+modify_html.js
+clean_dashboard.js
+fix_logout.js
+inject_html.js
+add_css.js

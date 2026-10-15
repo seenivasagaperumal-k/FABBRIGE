@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Profile | FabBridge</title>
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+<!-- =========================
+     TOPBAR & SIDEBAR WILL BE INJECTED BY navigation.js
+========================= -->
+
+        <header class="topbar">
+            <div class="logo">
+                <span class="hamburger" id="hamburgerMenu">☰</span>
+                FabBridge
+            </div>
+            <div class="topbar-right">
+                <input type="text" id="dashboardSearch" placeholder="Search...">
+                <span class="profile">
+                    👤 <span id="userName">User</span>
+                </span>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="mainSidebar">
+            <ul>
+                <li class=" "><a href="customer-dashboard.html">🏠 Dashboard</a></li>
+                <li class=""><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+                <li class=""><a href="marketplace.html">🌐 Marketplace</a></li>
+                <li class=""><a href="projects.html">📋 My Requirements</a></li>
+                <li class=""><a href="received-quotations.html">📨 Received Quotations</a></li>
+                
+                <li class=""><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+                
+                
+                <li class="active"><a href="profile.html">👤 Profile</a></li>
+                <li class=""><a href="settings.html">⚙️ Settings</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+    
+
+<div class="dashboard" id="dashboardLayout">
+    <main class="content">
+        
+
+<div class="profile-card">
+
+    <div class="profile-header">
+
+        <img
+            src="assets/images/profile.jpeg"
+            alt="Profile">
+
+        <h1 id="profileName">
+            Loading...
+        </h1>
+
+        <p id="accountType">
+            Customer
+        </p>
+
+    </div>
+
+
+    <form id="profileForm">
+
+        <!-- FULL NAME -->
+
+        <div class="input-group">
+
+            <label>
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Enter your full name"
+                required>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="input-group">
+
+            <label>
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                readonly>
+
+        </div>
+
+
+        <!-- PHONE -->
+
+        <div class="input-group">
+
+            <label>
+                Phone Number
+            </label>
+
+            <input
+                type="text"
+                id="phone"
+                placeholder="Enter phone number"
+                required>
+
+        </div>
+
+
+        <!-- ADDRESS -->
+
+        <div class="input-group">
+
+            <label>
+                Address
+            </label>
+
+            <textarea
+                id="address"
+                rows="4"
+                placeholder="Enter your address"
+                required></textarea>
+
+        </div>
+
+
+        <!-- ABOUT -->
+
+        <div class="input-group">
+
+            <label>
+                About
+            </label>
+
+            <textarea
+                id="about"
+                rows="5"
+                placeholder="Tell us something about yourself or your business"
+                required></textarea>
+
+        </div>
+
+
+        <!-- ACCOUNT TYPE -->
+
+        <div class="input-group">
+
+            <label>
+                Account Type
+            </label>
+
+            <input
+                type="text"
+                id="role"
+                value="Customer"
+                readonly>
+
+        </div>
+
+
+        <!-- UPDATE -->
+
+        <button
+            type="submit"
+            id="updateProfile">
+
+            Update Profile
+
+        </button>
+
+    </form>
+
+</div>
+
+
+
+
+
+    </main>
+</div>
+
+<script
+    type="module"
+    src="js/profile.js">
+</script>
+<script type="module" src="js/navigation.js"></script>
+
+</body>
+
+</html>

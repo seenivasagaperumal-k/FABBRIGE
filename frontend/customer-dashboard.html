@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Dashboard | FabBridge</title>
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/customer-dashboard.css">
+    <link rel="stylesheet" href="css/manufacturing-tracking.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOPBAR
+===================================================== -->
+
+
+        <header class="topbar">
+            <div class="logo">
+                <span class="hamburger" id="hamburgerMenu">☰</span>
+                FabBridge
+            </div>
+            <div class="topbar-right">
+                <input type="text" id="dashboardSearch" placeholder="Search...">
+                <span class="profile">
+                    👤 <span id="userName">User</span>
+                </span>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="mainSidebar">
+            <ul>
+                <li class=" active"><a href="customer-dashboard.html">🏠 Dashboard</a></li>
+                <li class=""><a href="tracking.html">🏭 Manufacturing Tracking</a></li>
+                <li class=""><a href="marketplace.html">🌐 Marketplace</a></li>
+                <li class=""><a href="projects.html">📋 My Requirements</a></li>
+                <li class=""><a href="received-quotations.html">📨 Received Quotations</a></li>
+                
+                <li class=""><a href="notifications.html">🔔 Notifications <span id="notificationCount" class="notification-badge">0</span></a></li>
+                <li class=""><a href="services.html">🛠️ Services</a></li>
+                
+                
+                <li class=""><a href="profile.html">👤 Profile</a></li>
+                <li class=""><a href="settings.html">⚙️ Settings</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+    
+
+
+
+<!-- =====================================================
+     DASHBOARD LAYOUT
+===================================================== -->
+
+<div class="dashboard">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="content">
+
+
+        <!-- =================================================
+             WELCOME
+        ================================================== -->
+
+        <div class="welcome-section">
+
+            <h1>
+
+                Welcome,
+
+                <span id="welcomeName">
+                    Customer
+                </span>
+
+                👋
+
+            </h1>
+
+
+            <p>
+
+                Manage your requirements,
+                quotations and business activities.
+
+        </div>
+
+        <!-- =================================================
+             QUICK ACTION SHORTCUTS
+        ================================================== -->
+        <div class="quick-actions-bar">
+            <a href="post_requirement.html" class="quick-action-btn primary-action">
+                <span>➕</span> Post Requirement
+            </a>
+            <a href="marketplace.html" class="quick-action-btn">
+                <span>🌐</span> Browse Marketplace
+            </a>
+            <a href="tracking.html" class="quick-action-btn">
+                <span>🏭</span> Manufacturing Tracking
+            </a>
+            <a href="received-quotations.html" class="quick-action-btn">
+                <span>📨</span> View Quotations
+            </a>
+        </div>
+
+        <!-- =================================================
+             DASHBOARD CARDS
+        ================================================== -->
+
+        <div class="cards">
+
+
+            <!-- MY REQUIREMENTS -->
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    📋
+
+                </div>
+
+
+                <div>
+
+                    <h2 id="totalRequirements">
+
+                        0
+
+                    </h2>
+
+
+                    <p>
+
+                        My Requirements
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECEIVED QUOTATIONS -->
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    📨
+
+                </div>
+
+
+                <div>
+
+                    <h2 id="receivedQuotations">
+
+                        0
+
+                    </h2>
+
+
+                    <p>
+
+                        Received Quotations
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACCEPTED QUOTATIONS -->
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    ✅
+
+                </div>
+
+
+                <div>
+
+                    <h2 id="acceptedQuotations">
+
+                        0
+
+                    </h2>
+
+
+                    <p>
+
+                        Accepted Quotations
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PENDING QUOTATIONS -->
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    ⏳
+
+                </div>
+
+
+                <div>
+
+                    <h2 id="pendingQuotations">
+
+                        0
+
+                    </h2>
+
+
+                    <p>
+
+                        Pending Quotations
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        
+        
+
+        <!-- =================================================
+             RECENT ACTIVITY
+        ================================================== -->
+
+        <section class="recent">
+
+
+            <div class="section-header">
+
+                <h2>
+
+                    Recent Activity
+
+                </h2>
+
+            </div>
+
+
+            <ul id="recentActivity">
+
+                <li>
+
+                    Loading recent activity...
+
+                </li>
+
+            </ul>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script
+    type="module"
+    src="js/customer-dashboard.js">
+</script>
+
+
+    <script type="module" src="js/navigation.js"></script>
+</body>
+
+</html>

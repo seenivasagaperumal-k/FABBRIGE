@@ -1,0 +1,456 @@
+/* =====================================================
+   FABBRIDGE - PRODUCTS MANAGEMENT (PRODUCTS.CSS)
+   Enterprise B2B Product Catalog & Form
+   ===================================================== */
+
+/* Header */
+.header {
+    width: 100%;
+    background: transparent;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid var(--fb-slate-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+.header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--fb-navy);
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.header p {
+    color: var(--fb-slate-500);
+    font-size: 14px;
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-product-btn {
+    border: none;
+    background: var(--fb-primary);
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: var(--fb-radius-md);
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+    transition: all 0.2s ease;
+    font-family: var(--fb-font);
+    white-space: nowrap;
+}
+
+.add-product-btn:hover {
+    background: var(--fb-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+.back-btn {
+    text-decoration: none;
+    background: #ffffff;
+    color: var(--fb-slate-700);
+    border: 1px solid var(--fb-slate-200);
+    padding: 10px 16px;
+    border-radius: var(--fb-radius-md);
+    font-size: 13.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.back-btn:hover {
+    background: var(--fb-slate-100);
+    color: var(--fb-navy);
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form Card */
+.form-card {
+    background: #ffffff;
+    padding: 32px 36px;
+    border-radius: var(--fb-radius-lg);
+    border: 1px solid var(--fb-slate-200);
+    box-shadow: var(--fb-shadow-sm);
+    margin-bottom: 30px;
+    animation: fbSlideUp 0.2s ease-out;
+}
+
+.form-card.hidden {
+    display: none;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--fb-slate-200);
+}
+
+.form-header h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--fb-navy);
+    margin-bottom: 5px;
+}
+
+.form-header p {
+    color: var(--fb-slate-500);
+    font-size: 13.5px;
+    margin: 0;
+}
+
+.close-btn {
+    border: none;
+    background: var(--fb-slate-100);
+    color: var(--fb-slate-600);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+}
+
+.close-btn:hover {
+    background: var(--fb-slate-200);
+    color: var(--fb-danger);
+}
+
+/* Form Controls */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--fb-navy);
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-md);
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+    color: var(--fb-navy);
+    font-family: var(--fb-font);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--fb-primary);
+    box-shadow: 0 0 0 3px var(--fb-primary-glow);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cancel-btn {
+    border: 1px solid var(--fb-slate-200);
+    background: #ffffff;
+    color: var(--fb-slate-700);
+    padding: 10px 18px;
+    border-radius: var(--fb-radius-md);
+    font-weight: 600;
+    font-size: 13.5px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.cancel-btn:hover {
+    background: var(--fb-slate-100);
+}
+
+.submit-btn {
+    border: none;
+    background: var(--fb-primary);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: var(--fb-radius-md);
+    font-weight: 700;
+    font-size: 13.5px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+    transition: all 0.2s ease;
+    font-family: var(--fb-font);
+}
+
+.submit-btn:hover {
+    background: var(--fb-primary-hover);
+    transform: translateY(-1px);
+}
+
+/* Products Section */
+.products-section {
+    width: 100%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--fb-navy);
+    margin-bottom: 4px;
+}
+
+.section-header p {
+    color: var(--fb-slate-500);
+    font-size: 13.5px;
+    margin: 0;
+}
+
+.product-count {
+    background: var(--fb-primary-light);
+    color: var(--fb-primary);
+    border: 1px solid #bfdbfe;
+    padding: 4px 12px;
+    border-radius: var(--fb-radius-full);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Product Grid */
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background: #ffffff;
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-lg);
+    padding: 22px;
+    box-shadow: var(--fb-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.22s ease;
+}
+
+.product-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: var(--fb-shadow-md);
+    transform: translateY(-2px);
+}
+
+.product-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--fb-navy);
+    margin-bottom: 8px;
+    line-height: 1.35;
+}
+
+.product-category {
+    display: inline-block;
+    background: var(--fb-primary-light);
+    color: var(--fb-primary);
+    border: 1px solid #bfdbfe;
+    padding: 3px 9px;
+    border-radius: var(--fb-radius-full);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    align-self: flex-start;
+}
+
+.product-description {
+    color: var(--fb-slate-600);
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    background: var(--fb-slate-50);
+    border: 1px solid var(--fb-slate-200);
+    border-radius: var(--fb-radius-sm);
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--fb-success-dark);
+}
+
+.product-quantity {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--fb-slate-600);
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--fb-slate-100);
+}
+
+.product-actions button {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: var(--fb-radius-sm);
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-family: var(--fb-font);
+}
+
+.edit-btn {
+    border: 1px solid var(--fb-primary);
+    background: #ffffff;
+    color: var(--fb-primary);
+}
+
+.edit-btn:hover {
+    background: var(--fb-primary-light);
+}
+
+.delete-btn {
+    border: 1px solid #fca5a5;
+    background: #ffffff;
+    color: var(--fb-danger);
+}
+
+.delete-btn:hover {
+    background: var(--fb-danger-light);
+}
+
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: var(--fb-slate-500);
+    font-size: 14px;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px 20px;
+    background: #ffffff;
+    border: 1px dashed var(--fb-slate-200);
+    border-radius: var(--fb-radius-lg);
+}
+
+.empty-state .empty-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.empty-state h3 {
+    color: var(--fb-navy);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.empty-state p {
+    color: var(--fb-slate-500);
+    font-size: 13.5px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .header-actions {
+        width: 100%;
+    }
+
+    .header-actions button,
+    .header-actions a {
+        flex: 1;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-card {
+        padding: 22px 18px;
+    }
+}
