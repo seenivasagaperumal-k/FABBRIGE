@@ -1,0 +1,37 @@
+[build]
+  publish = "frontend"
+
+[[redirects]]
+  from = "/marketplace"
+  to = "/marketplace.html"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/tracking"
+  to = "/tracking.html"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/register"
+  to = "/register.html"
+  status = 200
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/dashboard.html"
+  status = 200
+
+[[redirects]]
+  from = "/customer-dashboard"
+  to = "/customer-dashboard.html"
+  status = 200
